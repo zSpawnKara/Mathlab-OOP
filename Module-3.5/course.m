@@ -1,6 +1,6 @@
 % Course class definition
 classdef course
-    properties (SetAccess = private) % Bu söz dizimi ile properties niteliklerini ayarlayabilirsiniz
+    properties 
         Name (1,1) string
         Level (1,1) string {mustBeMember(Level,["White","Yellow","Green","Orange","Red"])} = "White"
         Waypoints (:,1) double {mustBePositive, mustBeInteger}
