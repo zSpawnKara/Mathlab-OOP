@@ -1,0 +1,30 @@
+% Bir Etkinliği Simüle Etmek İçin Nesnelerin Vektörlerini Kullanma
+
+% Bu kod, yol noktası sayılarının vektörlerini ve bir rota nesnesini oluşturur.
+w1 = [42 123 124 163 168 666];
+w2 = [42 112:123 666];
+
+c = course("Family Fun","White",w1)
+whos c
+
+
+
+Task 1 % MATLAB'ın vektör tabanlı yapısını sürdürmek adına, bir etkinliği bir dizi parkur nesnesi ve bir dizi ID çubuğu olarak temsil etmek mantıklıdır.
+c(2) = course("Insanity","Red",w2) % Şu anda c skalar (tek elemanlı) bir parkur nesnesidir.
+
+Task 2 % Her idstick nesnesinin tek bir seri numarası vardır. Ancak, idstick fonksiyonunu bir dizi seri numarası ile çağırmak, her bir seri numarası için bir ID çubuğu oluşturacak şekilde bir dizi ID çubuğu oluşturacaktır.
+id = idstick([123456,567890,987654])
+
+Task 3 % Register fonksiyonuna girişlerin hepsi skalar olmalıdır. Ancak, bir nesne dizisine (obj(k)) diğer dizilerde olduğu gibi endeksleme yapabilirsiniz.
+id(1) = register(id(1),"Astrid",c(1))
+
+Task 4 % Birden fazla katılımcı, kendi ID çubuklarını kullanarak aynı anda aynı parkura kaydolabilir ve koşabilir.
+id(2) = register(id(2),"Erik",c(1))
+
+Task 5 % Kayıt işleminde olduğu gibi, ID çubukları da tek tek kontrol noktalarında kontrol edilir, bu nedenle checkWaypoint fonksiyonuna giden ilk giriş bir skalar idstick nesnesi olmalıdır.
+id(1) = checkWaypoint(id(1),42)
+
+
+
+
+
