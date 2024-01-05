@@ -1,6 +1,12 @@
 % ID Stick sınıfı tanımlaması
 classdef idstick
-    properties
+    properties (SetAccess = immutable) % Genellikle farklı propertiesler için farklı erişim düzeyleri isteyeceksiniz. Her biri kendi öznitelik ayarlarına sahip, ihtiyaç duyduğunuz kadar çok özellik bloğuna sahip olabilirsiniz.
+        SerialNumber (1,1) uint32
+    end
+    properties (Access = private) % Access niteliğini özel yapmak, bu özelliklerin aslında kullanıcı tarafından görülemeyeceği anlamına gelir. Bu, bir iç durumu temsil eden özellikler için yararlı olabilir.
+        Status (1,1) string
+    end
+    properties (SetAccess = private) % Bu söz dizimi ile properties niteliklerini ayarlayabilirsiniz:
         SerialNumber (1,1) uint32
         Status (1,1) string
         Participant (1,1) string
@@ -80,6 +86,20 @@ classdef idstick
             id.Timestamps(n) = datetime("now");
             signal(id,ok)
         end
+    end
+    
+         methods (Access = private) % Özelliklerde olduğu gibi, kullanıcılarınızın onlarla nasıl etkileşimde bulunabileceğini kontrol etmek için yöntemlerinizin niteliklerini ayarlayabilirsiniz.
+            function signal(id,ok)
+                if ok
+                    if (id.Status == "Ready") || (id.Status == "Done")
+                        disp("Beep beep")
+                    else
+                        disp("Beep")
+                    end
+                else
+                    disp("Buzz")
+                end
+            end
 
         function [id,ok,idx] = updateStatus(id,wayptnum)
             wplist = id.Course.Waypoints;
@@ -101,5 +121,6 @@ classdef idstick
             end
         end
     end
+end
 
 end
