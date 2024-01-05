@@ -7,3 +7,8 @@ w = [42 123 124 163 168 666];
 
 Task 2 
 id = idstick(54321)
+
+% course.m classının içerisindeki course fonksiyonunun elemanlarının değerlerini atıyoruz.
+
+Task 3 
+c = course("Family Fun","White",w);
