@@ -5,3 +5,18 @@
 Task 2 
 c = course
 
+% Özel nesnelerinizin özelliklerinde depolanan değerlere erişmek için MATLAB'teki diğer nesnelerle aynı şekilde object.Property indeksleme yöntemini kullanabilirsiniz.
+
+Task 3 
+c = course
+lvl = c.Level
+
+% Özellik değerlerini değiştirmek için object.Property'ye atama yapabilirsiniz.
+
+Task 4
+c.Level = "White"
+
+% Propertiylerimiz üzerinde kısıtlama yoktur, herhangi bir değeri veya veri türünü içerebilirler. 
+
+Task 6
+c.Level = 42
