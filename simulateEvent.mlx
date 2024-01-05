@@ -1,26 +1,26 @@
-(* Bir Olayı Simüle Etmek İçin Nesneleri Kullanma *)
+% Bir Olayı Simüle Etmek İçin Nesneleri Kullanma 
 
 
- w = [42 123 124 163 168 666]; (* Bu kod, etkileşimde kullanılmak üzere ara nokta sayılarından oluşan bir vektör oluşturur. *)
+ w = [42 123 124 163 168 666]; % Bu kod, etkileşimde kullanılmak üzere ara nokta sayılarından oluşan bir vektör oluşturur. 
 
-Task 1 (* Yeni bir nesneyi (değişken), bu üç girişi kullanarak course fonksiyonunu çağırarak oluşturulabilir. *)
+Task 1 % Yeni bir nesneyi (değişken), bu üç girişi kullanarak course fonksiyonunu çağırarak oluşturulabilir. 
 c = course("Family Fun","White",w)
 
-Task 2 (*Bir katılımcı bir nesne oluşturmak için bir ID kayıt ettiğinde, ID  birçok bilgiyi içerir ilk oluşturulduğunda genellikle boştur. 
-Bir ID çubuğunu temsil etmek için idstick fonksiyonunu, ID çubuğunun seri numarasını temsil eden tek bir girişle çağırarak bir nesne oluşturabilirsiniz.
-*)
+Task 2 % Bir katılımcı bir nesne oluşturmak için bir ID kayıt ettiğinde, ID  birçok bilgiyi içerir ilk oluşturulduğunda genellikle boştur. 
+% Bir ID çubuğunu temsil etmek için idstick fonksiyonunu, ID çubuğunun seri numarasını temsil eden tek bir girişle çağırarak bir nesne oluşturabilirsiniz.
+
 id = idstick(123456)
 
-Task 3(* Oluşturduğumuz değişkenler, course ve idstick adlı özel sınıfların nesneleridir. *)
+Task 3 % Oluşturduğumuz değişkenler, course ve idstick adlı özel sınıfların nesneleridir. 
 whos
 
-Task 4 (* Çalışma alanınızdaki bir nesnenin özelliklerinin (içerdikleri bilgilerin) isimlerini görmek için properties fonksiyonunu kullanabilirsiniz.
-Benzer şekilde, nesnenizle çalışan metodların (fonksiyonların) isimlerini görmek için methods fonksiyonunu kullanabilirsiniz.*)
+Task 4 % Çalışma alanınızdaki bir nesnenin özelliklerinin (içerdikleri bilgilerin) isimlerini görmek için properties fonksiyonunu kullanabilirsiniz.
+% Benzer şekilde, nesnenizle çalışan metodların (fonksiyonların) isimlerini görmek için methods fonksiyonunu kullanabilirsiniz.
 properties(id)
 methods(id)
 
-Task 5 (* ID  nesnelerinde "register" adında bir metod bulunmaktadır. Bu metod, bir katılımcının ID  ile bir nesneye kaydolmasını simüle eder. *)
+Task 5 % ID  nesnelerinde "register" adında bir metod bulunmaktadır. Bu metod, bir katılımcının ID  ile bir nesneye kaydolmasını simüle eder. 
 id = register(id,"Astrid",c)
 
-Task 6 (* ID  nesnelerinin aynı zamanda bir katılımcının bir yol noktasında kontrol yapmasını simüle etmek için bir metodları bulunmaktadır. Burada "waypt", yol noktasının numarasını temsil eder. *)
+Task 6 % ID  nesnelerinin aynı zamanda bir katılımcının bir yol noktasında kontrol yapmasını simüle etmek için bir metodları bulunmaktadır. Burada "waypt", yol noktasının numarasını temsil eder. 
 id = checkWaypoint(id,42)
