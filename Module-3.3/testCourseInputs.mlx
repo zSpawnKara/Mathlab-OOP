@@ -1,0 +1,16 @@
+% Geçersiz Girişleri Kısıtlama
+
+% Geçerli girişlerle test edin (çalışması gerekir)
+
+w = [42 123 124 163 168 666];
+c1 = course("Family Fun",'Yellow',w)
+
+c2 = course('Crazy time',"Red",10:20)
+
+% Geçersiz girişlerle test edin (başarısız olmalıdır)
+
+% Numeric name
+c3 = course(42,"White",w)
+
+% String waypoint values
+c4 = course('Name OK',"Orange",["42" "123" "666"])
