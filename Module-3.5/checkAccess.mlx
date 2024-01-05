@@ -1,0 +1,38 @@
+% Property erişimi 
+
+
+% Course öğesi oluşturma
+w = [42 123 124 163 168 666];
+
+c = course("Family Fun","White",w)
+
+level = c.Level
+wout = c.Waypoints
+
+But not modified
+
+c.Level = "Yellow"
+
+ID Stick
+id = idstick(12345)
+
+Property access
+sn = id.SerialNumber
+
+id.SerialNumber = 54321
+
+id.Course = course("Shouldn't Be Allowed","Red",5:10)
+
+Methods can still access & modify properties
+id = register(id,"Erik",c)
+
+The Status property can be invisible to the user
+
+s = id.Status
+
+Restrict access to some methods
+
+id = updateStatus(id,124)
+
+
+signal(id,false)
