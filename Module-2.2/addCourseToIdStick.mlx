@@ -1,0 +1,23 @@
+% Bir Sınıfı Diğerinin İçinde Kullanmak
+
+% Bu kod, etkileşimde kullanılmak üzere bir kurs nesnesi oluşturur.
+c = course;
+c.Name = "Family Fun";
+c.Level = "White";
+c.Waypoints = [42 123 124 163 168 666]
+
+% Id değişkeninine  idstick classını tanımladıktan sonra SerialNumber değişkeninin değerini atıyoruz
+
+Task 1 
+id = idstick
+id.SerialNumber = 1234
+
+% Bir nesnenin özelliğinin değeri, başka nesneler de dahil olmak üzere herhangi bir boyutta veya türde olabilir.
+
+Task 2 
+id.Course = c
+
+% Nokta indeksleme kullanarak özellik değerlerini çıkarabilirsiniz. Eğer özellik başka bir nesne içeriyorsa, onun üzerinde de nokta indekslemeyi kullanabilirsiniz.
+
+Task 3 
+w = id.Course.Waypoints
