@@ -1,4 +1,4 @@
-% Kurs sınıfı tanımı
+% Kurs Class tanımı
 classdef course
     properties
         Name
