@@ -1,0 +1,13 @@
+% Kurs Nesnelerinden Bir Vektör Oluşturma
+
+% Bu kod ara noktaların vektörlerini tanımlar ve bir rota nesnesi oluşturur.
+
+w1 = [42 123 124 163 168 666];
+w2 = [42 123:127 144:146 666];
+w3 = [42 163:174 666];
+c = course("Family Fun","White",w1)
+
+% MATLAB'ın dizi tabanlı doğasına uygun olarak, bir oryantiring olayını parkur nesnelerinden oluşan bir vektörle simüle etmek mantıklı olacaktır. 
+
+Task 2  
+c(2) = course("Challenge","Orange",w2)
