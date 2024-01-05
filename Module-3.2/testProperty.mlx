@@ -1,0 +1,22 @@
+% Özellik Türlerini Ayarlama
+
+% Geçerli girişlerle test edin
+
+w = [42 123 124 163 168 666];
+c = course("Family Fun",'Yellow',w)
+
+nameout = c.Name
+levelout = c.Level
+wout = c.Waypoints
+
+whos w nameout levelout wout
+
+% Geçersiz(?) girişlerle test edin
+w = [-12;0;123;NaN];
+c2 = course(42,'Banana',w)
+
+nameout = c2.Name
+levelout = c2.Level
+wout = c2.Waypoints
+
+whos w nameout levelout wout
