@@ -1,0 +1,7 @@
+% Özel Sınıf Oluşturma
+
+
+% Eğer bir sınıf tanımlama dosyanız (classname.m) varsa. Yeni bir değişken (OOP terimleriyle nesne) olan obj'yi classname türünde oluşturacaktır.
+Task 2 
+c = course
+
