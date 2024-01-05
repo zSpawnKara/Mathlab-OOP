@@ -1,0 +1,9 @@
+% Constructor kullanımı
+
+% Bu kod, etkileşimde kullanılmak üzere bir kurs nesnesi ve bir idstick nesnesi oluşturur.
+w = [42 123 124 163 168 666];
+
+% idstick.m classımızın idstick isimli fonksiyonuna değer ataması yapıyoruz. 
+
+Task 2 
+id = idstick(54321)
