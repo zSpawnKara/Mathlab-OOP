@@ -1,0 +1,19 @@
+% Fonksiyon Ekleme
+
+% Bu kod, etkileşimde kullanılmak üzere bir kurs nesnesi ve bir idstick nesnesi oluşturur.
+c = course;
+c.Name = "Family Fun";
+c.Level = "White";
+c.Waypoints = [42 123 124 163 168 666];
+
+id = idstick;
+id.SerialNumber = 1234;
+id.Course = c;
+id.Status = "Ready"
+
+% Herhangi bir işlevi çağırdığınız gibi, belirli bir nesne üzerinde bir yöntemi çağırabilirsiniz.
+
+Task 1 
+signal(id,true)
+
+ 
