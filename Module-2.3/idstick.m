@@ -33,6 +33,10 @@ classdef idstick
         function id = register(id,name,course)
             id.Participant = name;
             id.Course = course;
+            
+            %  register metodunun fiziksel bir ID çubuğunu temsil eden bir nesneyi güncellemesi amaçlanmıştır.
+            id.Status = "Ready";
+            signal(id,true)
         end
         
     end
